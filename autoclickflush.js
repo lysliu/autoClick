@@ -4,14 +4,12 @@ var nums=[
 "18XXXXXXXXX"
 ]
 function autoClick(){
-        var obj = new Date()
-        var curHour =  obj.getHours()
-        var curMinute = obj.getMinutes()
-        var curSecond = obj.getSeconds()
-        if( curHour == 9 || curHour ==14 && curMinute==53 && curSecond==59){
-                // if( curHour == 9 || curHour ==21 && curMinute==59 && curSecond==59){
-        
-        // $(".zhc-btn__content").click(); 
+        var client_time = new Date()
+        var server_time = $.ajax({type:'HEAD', async:'false'}).getResponseHeader('date');
+        // TODO compare client_time, server_time, click on the button
+        setInterval(function(){
+
+        }, 1000)
         document.getElementById("lys").click()
        } 
 }
