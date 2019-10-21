@@ -1,0 +1,22 @@
+﻿{     
+ "name": "抢茅台",   
+ "version": "0.5",  
+   "manifest_version": 2,    
+ "description": "抢茅台",  
+      
+  "icons": {  
+                      
+         "16": "images/32.png",
+        "128": "images/128.png"	 
+           },     
+ "permissions": [  
+          "tabs", "http://*/*","https://*/*" 
+  
+     ],  
+  "content_scripts":[
+  {
+      "matches":["http://XXXXXXX:8888/XXXXX/XXXXXXX/*"],
+      "js":["jquery-1.7.2.min.js","autoclickflush.js"]
+  }
+  ]   
+}  
